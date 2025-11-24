@@ -1,0 +1,5 @@
+git --version -> wersja git
+git status -> status projektu
+ code .  -> uruchomienie vs code
+ git add nowy_plik.txt -> dodanie pliku do projektu
+ git commit  -m "nowy fragment tekstu!" -> zatwierdenie zmian w pliku dodanym
