@@ -1,5 +1,14 @@
 git --version -> wersja git
 git status -> status projektu
- code .  -> uruchomienie vs code
- git add nowy_plik.txt -> dodanie pliku do projektu
- git commit  -m "nowy fragment tekstu!" -> zatwierdenie zmian w pliku dodanym
+code .  -> uruchomienie vs code
+git add nowy_plik.txt -> dodanie pliku do projektu
+git commit  -m "nowy fragment tekstu!" -> zatwierdenie zmian w pliku dodanym
+git push --set-upstream origin main -> wysłanie zmian do GitLab
+git log -> historia commitów
+
+git log --oneline --graph --all -> uporządkowany widok historii
+
+PRACA ZDALNIE
+
+git switch -c feature/opis -> utworzenie nowgo brancha
+git push --set-upstream origin feature/opis -> utówrz plik dodaj do przed add a następnie zrób push!
