@@ -1,0 +1,63 @@
+PS C:\Users\marci\gitlab-ci-calculator> git pull feature/new-test
+fatal: 'feature/new-test' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\marci\gitlab-ci-calculator> git status
+On branch feature/new-test
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    .gitlab-ci.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\marci\gitlab-ci-calculator> git switch main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS C:\Users\marci\gitlab-ci-calculator> git status
+On branch main
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+PS C:\Users\marci\gitlab-ci-calculator> git pull
+Updating b43fc8b..61aeb0f
+Fast-forward
+ test_calculator.py | 2 ++
+ 1 file changed, 2 insertions(+)
+PS C:\Users\marci\gitlab-ci-calculator> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "add build and test with artifacts"
+[main fbb069d] add build and test with artifacts
+ 1 file changed, 16 insertions(+), 6 deletions(-)
+PS C:\Users\marci\gitlab-ci-calculator> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 494 bytes | 494.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   61aeb0f..fbb069d  main -> main
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "add build and test with artifacts - new"
+[main 51388cc] add build and test with artifacts - new
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+PS C:\Users\marci\gitlab-ci-calculator> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 418 bytes | 418.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   fbb069d..51388cc  main -> main
+PS C:\Users\marci\gitlab-ci-calculator>
