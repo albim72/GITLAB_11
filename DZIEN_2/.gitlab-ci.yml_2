@@ -1,0 +1,24 @@
+stages:
+  - build
+  - test
+build_report:
+  stage: build
+  image: python:3.11
+  script:
+    - mkdir -p build
+    - echo "Wynik analizy kodu $(date)" > build/report.txt
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 week
+
+run_tests:
+  stage: test
+  image: python:3.11
+  needs:
+    - job: build_report
+      artifacts: true
+  before_script:
+    - pip install -r requirements.txt
+  script:
+    - pytest
