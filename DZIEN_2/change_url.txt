@@ -1,0 +1,44 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\marci> cd nproject
+PS C:\Users\marci\nproject> cd ..
+PS C:\Users\marci> cd nowyprojekt
+cd : Cannot find path 'C:\Users\marci\nowyprojekt' because it does not exist.
+At line:1 char:1
++ cd nowyprojekt
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\marci\nowyprojekt:String) [Set-Location], ItemNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\marci> cd nproject
+PS C:\Users\marci\nproject> git remote set-url origin https://https://gitlab.com/marcin.albiniak72-group/nowyprojekt.git
+
+PS C:\Users\marci\nproject> git remote set-url origin https://gitlab.com/marcin.albiniak72-group/nowyprojekt.git
+PS C:\Users\marci\nproject> git remote -v
+origin  https://gitlab.com/marcin.albiniak72-group/nowyprojekt.git (fetch)
+origin  https://gitlab.com/marcin.albiniak72-group/nowyprojekt.git (push)
+PS C:\Users\marci\nproject> git pull
+From https://gitlab.com/marcin.albiniak72-group/nowyprojekt
+ * [new tag]         v.2.0      -> v.2.0
+Already up to date.
+PS C:\Users\marci\nproject> code .
+PS C:\Users\marci\nproject> git add README,md
+fatal: pathspec 'README,md' did not match any files
+PS C:\Users\marci\nproject> git add README.md
+PS C:\Users\marci\nproject> git commit -m "Test zmiany UEL repo"
+[main 2a38060] Test zmiany UEL repo
+ 1 file changed, 1 insertion(+)
+PS C:\Users\marci\nproject> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 387 bytes | 387.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72-group/nowyprojekt.git
+   b98ca05..2a38060  main -> main
+PS C:\Users\marci\nproject>
