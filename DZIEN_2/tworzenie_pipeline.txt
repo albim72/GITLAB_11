@@ -272,7 +272,61 @@ To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
 PS C:\Users\marci\gitlab-ci-calculator> code .
 PS C:\Users\marci\gitlab-ci-calculator>
 
+11.kroki końcowe - nowy branch + MR
 
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   ba824cd..aaec65f  main -> main
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git checkout -b feature/new-test
+Switched to a new branch 'feature/new-test'
+PS C:\Users\marci\gitlab-ci-calculator> git switch main
+Switched to branch 'main'
+M       .gitlab-ci.yml
+Your branch is up to date with 'origin/main'.
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "adding rules ne"
+[main b43fc8b] adding rules ne
+ 1 file changed, 1 deletion(-)
+PS C:\Users\marci\gitlab-ci-calculator> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   aaec65f..b43fc8b  main -> main
+PS C:\Users\marci\gitlab-ci-calculator> git checkout feature/new-test
+Switched to branch 'feature/new-test'
+PS C:\Users\marci\gitlab-ci-calculator> git add test_calculator.py
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "add more tests"
+On branch feature/new-test
+nothing to commit, working tree clean
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add test_calculator.py
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "add more tests"
+[feature/new-test 65583ed] add more tests
+ 1 file changed, 2 insertions(+)
+PS C:\Users\marci\gitlab-ci-calculator> git push origin
+fatal: The current branch feature/new-test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/new-test
+
+PS C:\Users\marci\gitlab-ci-calculator> git push origin feature/new-test
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote:
+remote: To create a merge request for feature/new-test, visit:
+remote:   https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator/-/merge_requests/new?merge_request%5Bsource_branch%5D=feature%2Fnew-test
+remote:
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+ * [new branch]      feature/new-test -> feature/new-test
+PS C:\Users\marci\gitlab-ci-calculator>
 
 
 
