@@ -1,0 +1,34 @@
+1. W GitLab utwórz nowy projekt -> gitlab-ci-calculator
+2. repo
+
+PS C:\Users\marci\nowyprojekt> cd ..
+PS C:\Users\marci> git clone git@gitlab.com:marcin.albiniak72/gitlab-ci-calculator.git
+Cloning into 'gitlab-ci-calculator'...
+The authenticity of host 'gitlab.com (172.65.251.78)' can't be established.
+ECDSA key fingerprint is SHA256:HbW3g8zUjNSksFbqTiUWPWg2Bq1x8xdGUrliXFzSnUw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'gitlab.com,172.65.251.78' (ECDSA) to the list of known hosts.
+git@gitlab.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\marci> git clone https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+Cloning into 'gitlab-ci-calculator'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), done.
+PS C:\Users\marci> dir
+
+PS C:\Users\marci> dir .\gitlab-ci-calculator\
+
+
+    Directory: C:\Users\marci\gitlab-ci-calculator
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        25.11.2025     11:09           6265 README.md
