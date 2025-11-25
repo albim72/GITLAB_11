@@ -175,5 +175,23 @@ To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
    abb40c8..f431b91  main -> main
 PS C:\Users\marci\gitlab-ci-calculator>
 
+8. Zmiana w pliku calculator.py  i push do repo na GitLabie
+
+
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add calculator.py
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Intorduce bug in add()"
+[main c0393ef] Intorduce bug in add()
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\marci\gitlab-ci-calculator> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   f431b91..c0393ef  main -> main
+PS C:\Users\marci\gitlab-ci-calculator>
 
 
