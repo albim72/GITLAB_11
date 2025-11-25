@@ -154,6 +154,26 @@ To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
    ce69b6a..abb40c8  main -> main
 PS C:\Users\marci\gitlab-ci-calculator>
 
+7. PUSH PLIKU CI
+
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Add GitLab CI pipeline with pytest"
+[main f431b91] Add GitLab CI pipeline with pytest
+ 1 file changed, 10 insertions(+)
+ create mode 100644 .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git pushorigin main
+git: 'pushorigin' is not a git command. See 'git --help'.
+PS C:\Users\marci\gitlab-ci-calculator> git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 398 bytes | 398.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   abb40c8..f431b91  main -> main
+PS C:\Users\marci\gitlab-ci-calculator>
 
 
 
