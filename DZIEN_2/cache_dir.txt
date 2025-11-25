@@ -1,0 +1,197 @@
+PS C:\Users\marci\gitlab-ci-calculator> mkdir -p .cache/pip
+
+
+    Directory: C:\Users\marci\gitlab-ci-calculator\.cache
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        25.11.2025     15:17                pip
+
+
+PS C:\Users\marci\gitlab-ci-calculator> git add .cache
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Add cache directory"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\marci\gitlab-ci-calculator> git push
+Everything up-to-date
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Add cache"
+[main c2567ba] Add cache
+ 1 file changed, 15 insertions(+), 25 deletions(-)
+ rewrite .gitlab-ci.yml (82%)
+PS C:\Users\marci\gitlab-ci-calculator> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 441 bytes | 441.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   51388cc..c2567ba  main -> main
+PS C:\Users\marci\gitlab-ci-calculator> cd cache
+cd : Cannot find path 'C:\Users\marci\gitlab-ci-calculator\cache' because it does not exist.
+At line:1 char:1
++ cd cache
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\marci\...alculator\cache:String) [Set-Location], ItemNotFoundE
+   xception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\marci\gitlab-ci-calculator> cd .cache
+PS C:\Users\marci\gitlab-ci-calculator\.cache> cd pip
+PS C:\Users\marci\gitlab-ci-calculator\.cache\pip> code .
+PS C:\Users\marci\gitlab-ci-calculator\.cache\pip> git add .cache
+fatal: pathspec '.cache' did not match any files
+PS C:\Users\marci\gitlab-ci-calculator\.cache\pip> cd..
+PS C:\Users\marci\gitlab-ci-calculator\.cache> cd..
+PS C:\Users\marci\gitlab-ci-calculator> rmdir .cache
+
+Confirm
+The item at C:\Users\marci\gitlab-ci-calculator\.cache has children and the Recurse parameter was not specified. If you
+ continue, all children will be removed with the item. Are you sure you want to continue?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y
+PS C:\Users\marci\gitlab-ci-calculator> di
+di : The term 'di' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spe
+lling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ di
++ ~~
+    + CategoryInfo          : ObjectNotFound: (di:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\marci\gitlab-ci-calculator> dir
+
+
+    Directory: C:\Users\marci\gitlab-ci-calculator
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        25.11.2025     11:35                .pytest_cache
+-a----        25.11.2025     15:25            292 .gitlab-ci.yml
+-a----        25.11.2025     13:15            204 calculator.py
+-a----        25.11.2025     11:09           6265 README.md
+-a----        25.11.2025     11:41              6 requirements.txt
+-a----        25.11.2025     15:00            217 test_calculator.py
+
+
+PS C:\Users\marci\gitlab-ci-calculator> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\marci\gitlab-ci-calculator> mkdir -p .cache/pip
+
+
+    Directory: C:\Users\marci\gitlab-ci-calculator\.cache
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        25.11.2025     15:30                pip
+
+
+PS C:\Users\marci\gitlab-ci-calculator> touch .cache/pip/.gitkeep
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check t
+he spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ touch .cache/pip/.gitkeep
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add .cache/pip/.gitkeep
+PS C:\Users\marci\gitlab-ci-calculator> got commit -m "Add cache"
+got : The term 'got' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the s
+pelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ got commit -m "Add cache"
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (got:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Add cache"
+[main bcf7273] Add cache
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .cache/pip/.gitkeep
+PS C:\Users\marci\gitlab-ci-calculator> git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 355 bytes | 355.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   c2567ba..bcf7273  main -> main
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> got commit -m "Add directory"
+got : The term 'got' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the s
+pelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ got commit -m "Add directory"
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (got:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\marci\gitlab-ci-calculator> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitlab-ci.yml
+
+PS C:\Users\marci\gitlab-ci-calculator> git restore --staged .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Add directory"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+        modified:   .gitlab-ci.yml
+
+no changes added to commit
+PS C:\Users\marci\gitlab-ci-calculator> git restore --staged .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Add directory"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+        modified:   .gitlab-ci.yml
+
+no changes added to commit
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Add directory"
+[main da0e89b] Add directory
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+PS C:\Users\marci\gitlab-ci-calculator> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 357 bytes | 357.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   bcf7273..da0e89b  main -> main
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Add directory"
+[main 38a00ee] Add directory
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\marci\gitlab-ci-calculator> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   da0e89b..38a00ee  main -> main
+PS C:\Users\marci\gitlab-ci-calculator>
