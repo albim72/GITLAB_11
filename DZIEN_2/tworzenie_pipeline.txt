@@ -71,5 +71,89 @@ Installing collected packages: pip
 Successfully installed pip-25.3
 PS C:\Users\marci\gitlab-ci-calculator>
 
+5.PYTEST
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> pytest
+================================================= test session starts =================================================
+platform win32 -- Python 3.12.7, pytest-9.0.1, pluggy-1.6.0
+rootdir: C:\Users\marci\gitlab-ci-calculator
+plugins: anyio-4.2.0, hydra-core-1.3.2
+collected 2 items
+
+test_calculator.py .F                                                                                            [100%]
+
+====================================================== FAILURES =======================================================
+______________________________________________________ test_sub _______________________________________________________
+
+    def test_sub():
+        assert sub(5,3) == 2
+>       assert add(0,1) == -1
+E       assert 1 == -1
+E        +  where 1 = add(0, 1)
+
+test_calculator.py:9: AssertionError
+=============================================== short test summary info ===============================================
+FAILED test_calculator.py::test_sub - assert 1 == -1
+============================================= 1 failed, 1 passed in 0.22s =============================================
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> pytest
+================================================= test session starts =================================================
+platform win32 -- Python 3.12.7, pytest-9.0.1, pluggy-1.6.0
+rootdir: C:\Users\marci\gitlab-ci-calculator
+plugins: anyio-4.2.0, hydra-core-1.3.2
+collected 2 items
+
+test_calculator.py ..                                                                                            [100%]
+
+================================================== 2 passed in 0.04s ==================================================
+PS C:\Users\marci\gitlab-ci-calculator> code ,
+At line:1 char:6
++ code ,
++      ~
+Missing argument in parameter list.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingArgument
+
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> dir
+
+
+    Directory: C:\Users\marci\gitlab-ci-calculator
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        25.11.2025     11:35                .pytest_cache
+d-----        25.11.2025     11:36                __pycache__
+-a----        25.11.2025     11:21            204 calculator.py
+-a----        25.11.2025     11:09           6265 README.md
+-a----        25.11.2025     11:37              6 requirements.txt
+-a----        25.11.2025     11:36            175 test_calculator.py
+
+
+PS C:\Users\marci\gitlab-ci-calculator> code .
+
+
+6. PIERWSZY COMMIT
+
+PS C:\Users\marci\gitlab-ci-calculator> git add calculator.py test_calculator.py requirements.txt
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "Py calculator with tests"
+[main abb40c8] Py calculator with tests
+ 3 files changed, 21 insertions(+)
+ create mode 100644 calculator.py
+ create mode 100644 requirements.txt
+ create mode 100644 test_calculator.py
+PS C:\Users\marci\gitlab-ci-calculator> git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 612 bytes | 612.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   ce69b6a..abb40c8  main -> main
+PS C:\Users\marci\gitlab-ci-calculator>
+
+
 
 
