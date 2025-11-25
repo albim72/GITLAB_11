@@ -194,4 +194,85 @@ To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
    f431b91..c0393ef  main -> main
 PS C:\Users\marci\gitlab-ci-calculator>
 
+9. Błąd po poprawkach na GitLab
+
+CONFLICT (content): Merge conflict in .gitlab-ci.yml
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\marci\gitlab-ci-calculator> git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "adding rules 2"
+[main 041e0c6] adding rules 2
+PS C:\Users\marci\gitlab-ci-calculator> git pushorigin main
+git: 'pushorigin' is not a git command. See 'git --help'.
+PS C:\Users\marci\gitlab-ci-calculator> git push origin main
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\marci\gitlab-ci-calculator> git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        __pycache__/
+
+
+10. usunięcie  __pycache__. Poprawki..
+
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\marci\gitlab-ci-calculator> git stash
+No local changes to save
+PS C:\Users\marci\gitlab-ci-calculator> git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 1), reused 1 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), done.
+From https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator
+   2265f65..ba824cd  main       -> origin/main
+Removing .gitlab-ci.yml
+Merge made by the 'recursive' strategy.
+ .gitlab-ci.yml | 14 --------------
+ 1 file changed, 14 deletions(-)
+ delete mode 100644 .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git stash pop
+No stash entries found.
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator> git add .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git commit -m "adding rules new"
+[main aaec65f] adding rules new
+ 1 file changed, 15 insertions(+)
+ create mode 100644 .gitlab-ci.yml
+PS C:\Users\marci\gitlab-ci-calculator> git push origin main
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 1.28 KiB | 656.00 KiB/s, done.
+Total 11 (delta 6), reused 0 (delta 0)
+To https://gitlab.com/marcin.albiniak72/gitlab-ci-calculator.git
+   ba824cd..aaec65f  main -> main
+PS C:\Users\marci\gitlab-ci-calculator> code .
+PS C:\Users\marci\gitlab-ci-calculator>
+
+
+
+
 
